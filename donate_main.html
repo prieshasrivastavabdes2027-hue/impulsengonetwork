@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose Who You Want to Support</title>
+
+<style>
+    * {
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* NAVBAR */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(248, 180, 78, 0.929);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        nav .menu a {
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            font-size: 16px;
+        }
+        
+    /* PAGE */
+    body {
+        background: #f7f7f7;
+        padding-top: 100px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 40px;
+        color: #222;
+    }
+
+    .wrapper {
+        width: 90%;
+        max-width: 1250px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* HORIZONTAL SECTIONS */
+    .donation-panel {
+        display: flex;
+        gap: 25px;
+        background: white;
+        border-radius: 60px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .donation-panel img {
+         width: 280px;          
+         height: 260px;         
+         overflow: hidden;      
+         border-radius: 60px;
+    }
+
+    .panel-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .panel-text h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+        color: #222;
+    }
+
+    .panel-text p {
+        font-size: 15px;
+        color: #444;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        max-width: 90%;
+    }
+
+    .progress-bar {
+        width: 100%;
+        background: #f06012;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 14px;
+        margin-bottom: 10px;
+    }
+
+    .progress {
+        height: 14px;
+        background: #c2f127;
+    }
+
+    .stats {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .donate-btn {
+        padding: 12px 22px;
+        background: #ffba4b;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+        width: fit-content;
+        transition: 0.3s;
+    }
+
+    .donate-btn:hover {
+        background: #cc0000;
+    }
+
+    @media(max-width: 900px) {
+        .donation-panel {
+            flex-direction: column;
+        }
+        .donation-panel img {
+            width: 100%;
+            height: auto;    
+            border-radius: 40px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Impulse NGO Network</div>
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="joinus.html">Join Us</a>
+        <a href="ourwork.html">Our Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</nav>
+
+<h1>Choose the Cause You Want to Support</h1>
+
+<div class="wrapper">
+
+    <!-- 1. LEGAL AID -->
+    <div class="donation-panel">
+        <img src="img/madhvi.jpg.png" alt="">
+        <div class="panel-text">
+            <h2>Legal Aid Fund</h2>
+            <p>
+                “Hi… I’m Madhvi. I escaped trafficking last year. I’m still fighting my case, 
+                but legal paperwork and court hearings cost more than my family can afford.  
+                Your support helps survivors like me stand our ground.”
+            </p>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 62%;"></div>
+            </div>
+            <div class="stats">₹62,000 raised of ₹1,00,000 goal</div>
+
+            <a href="donate.html" class="donate-btn">Donate Now</a>
+        </div>
+    </div>
+
+    <!-- 2. MEDICAL FUND -->
+    <div class="donation-panel">
+        <img src="img/ritu.jpg.png" alt="">
+        <div class="panel-text">
+            <h2>Emergency Medical Care</h2>
+            <p>
+                “I’m Ritu. The day I was rescued, I couldn’t even stand.  
+                I’m healing now, but medicines, vaccinations, and follow-ups are expensive.  
+                Your contribution helps survivors recover with dignity.”
+            </p>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 48%;"></div>
+            </div>
+            <div class="stats">₹48,500 raised of ₹1,00,000 goal</div>
+
+            <a href="donate.html" class="donate-btn">Donate Now</a>
+        </div>
+    </div>
+
+    <!-- 3. PSYCHOLOGICAL SUPPORT -->
+    <div class="donation-panel">
+        <img src="img/lalita.jpg.png" alt="">
+        <div class="panel-text">
+            <h2>Psychological & Counselling Support</h2>
+            <p>
+                “My name is Tara. I’m learning to breathe again after years of trauma.  
+                Counselling is helping me rebuild my mind and trust.  
+                Your support gives us strength we never thought we’d feel again.”
+            </p>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;"></div>
+            </div>
+            <div class="stats">₹70,000 raised of ₹1,00,000 goal</div>
+
+            <a href="donate.html" class="donate-btn">Donate Now</a>
+        </div>
+    </div>
+
+    <!-- 4. REINTEGRATION -->
+    <div class="donation-panel">
+        <img src="img/girl.png" alt="">
+        <div class="panel-text">
+            <h2>Reintegration & Safe Home Support</h2>
+            <p>
+                “I’m Neha. I’m finally safe… but rebuilding life needs clothes, books, food, and support.  
+                Your kindness will help me restart my life and have a better future when i grow up.”
+            </p>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 40%;"></div>
+            </div>
+            <div class="stats">₹40,000 raised of ₹1,00,000 goal</div>
+
+            <a href="donate.html" class="donate-btn">Donate Now</a>
+        </div>
+    </div>
+
+    <!-- 5. AWARENESS FUND -->
+    <div class="donation-panel">
+        <img src="img/man.png" alt="">
+        <div class="panel-text">
+            <h2>Awareness & Prevention Campaigns</h2>
+            <p>
+                “I’m Vikram. I never knew I was at risk — nobody in my village did.  
+                Awareness programs save people before the danger even begins.  
+                Your donation protects future survivors.”
+            </p>
+
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%;"></div>
+            </div>
+            <div class="stats">₹85,000 raised of ₹1,00,000 goal</div>
+
+            <a href="donate.html" class="donate-btn">Donate Now</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

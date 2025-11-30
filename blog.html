@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Impulse NGO Network</title>
+
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+        background:#f7f7f7;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:#222;
+    }
+
+    :root{
+        --yellow:rgba(248,180,78,0.929);
+    }
+
+    /* NAVBAR */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(248, 180, 78, 0.929);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        nav .menu a {
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            font-size: 16px;
+        }
+
+    /* HEADER */
+    .header{
+        margin-top:130px;
+        padding:0 50px;
+    }
+    .header h1{
+        font-size:52px;
+        font-weight:800;
+        margin-bottom:10px;
+        color: #c72f2f;
+    }
+    .header p{
+        font-size:20px;
+        color:#282828;
+        margin-bottom:40px;
+    }
+
+    /* GOOGLE NEWS STYLE ROW */
+    .row{
+        display:flex;
+        overflow-x:auto;
+        gap:40px;
+        padding:40px 50px;
+        scroll-snap-type:x mandatory;
+    }
+    .row::-webkit-scrollbar{
+        height:8px;
+    }
+    .row::-webkit-scrollbar-thumb{
+        background:#ccc;
+        border-radius:20px;
+    }
+
+    .card{
+        flex:0 0 600px; /* long horizontal cards */
+        background:white;
+        border-radius:14px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        scroll-snap-align:start;
+        overflow:hidden;
+    }
+
+    .card-img{
+        width:100%;
+        height:250px;
+        background-size:cover;
+        background-position:center;
+    }
+
+    .card-content{
+        padding:30px;
+    }
+
+    .card-content h2{
+        font-size:28px;
+        font-weight:800;
+        margin-bottom:10px;
+    }
+
+    .card-content p{
+        font-size:17px;
+        color:#444;
+        margin-bottom:20px;
+        line-height:1.6;
+    }
+
+    .readmore{
+        display:inline-block;
+        font-size:16px;
+        color:var(--yellow);
+        font-weight:bold;
+        text-decoration:none;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">Impulse NGO Network</div>
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="joinus.html">Join Us</a>
+        <a href="ourwork.html">Our Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Latest Stories</h1>
+    <p>Insights, investigations and updates from the field.</p>
+</div>
+
+<!-- BLOG ROW -->
+<div class="row">
+
+    <!-- BLOG 1 – IMPULSE MODEL -->
+    <div class="card">
+        <div class="card-img" style="background-image:url(img/im.png);"></div>
+        <div class="card-content">
+            <h2>The Impulse Model: A Global Framework for Combating Trafficking</h2>
+            <p>
+                The award-winning Impulse Model is a multi-stakeholder system designed to prevent trafficking,
+                rescue victims, and ensure cross-border justice. Today, it is replicated across Nepal, Bangladesh and Myanmar.
+            </p>
+            <a class="readmore" href="impulse-model.html">Read More →</a>
+        </div>
+    </div>
+
+    <!-- BLOG 2 – SAFE MIGRATION -->
+    <div class="card">
+        <div class="card-img" style="background-image:url(img/safe\ migration.png);"></div>
+        <div class="card-content">
+            <h2>Safe Migration: Why Awareness Saves Lives</h2>
+            <p>
+                Many trafficking cases begin with promises of work outside the state or country.
+                Our safe-migration campaigns build community awareness so people can identify risks before it’s too late.
+            </p>
+            <a class="readmore" href="#">Read More →</a>
+        </div>
+    </div>
+
+    <!-- BLOG 3 – RAT HOLE MINING -->
+    <div class="card">
+        <div class="card-img" style="background-image:url('img/rat\ hole.jpg');"></div>
+        <div class="card-content">
+            <h2>The Hidden Reality of Rat-Hole Mining</h2>
+            <p>
+                After years of fieldwork, INGON uncovered the brutal conditions inside Meghalaya’s illegal coal mines,
+                documenting hundreds of child workers and leading the call for legal reform.
+            </p>
+            <a class="readmore" href="rat-hole-mining.html">Read More →</a>
+        </div>
+    </div>
+
+    <!-- BLOG 4 – CHILD LABOUR -->
+    <div class="card">
+        <div class="card-img" style="background-image:url('img/child\ labour.jpg');"></div>
+        <div class="card-content">
+            <h2>Child Labour: The Stories Behind the Statistics</h2>
+            <p>
+                Behind every number is a child who deserved a childhood. INGON’s rescues highlight
+                the emotional and psychological toll forced labour leaves behind.
+            </p>
+            <a class="readmore" href="#">Read More →</a>
+        </div>
+    </div>
+
+    <!-- BLOG 5 – CROSS BORDER RESCUE -->
+    <div class="card">
+        <div class="card-img" style="background-image:url('img/border.png');"></div>
+        <div class="card-content">
+            <h2>Cross-Border Rescue: When Justice Requires Collaboration</h2>
+            <p>
+                Working with Nepal, Myanmar and Bangladesh, INGON facilitates the repatriation process,
+                ensuring survivors return home safely and receive legal support.
+            </p>
+            <a class="readmore" href="#">Read More →</a>
+        </div>
+    </div>
+
+    <!-- BLOG 6 – IMPACT STORY -->
+    <div class="card">
+        <div class="card-img" style="background-image:url('img/survivor.png');"></div>
+        <div class="card-content">
+            <h2>A Survivor’s Journey Back to Freedom</h2>
+            <p>
+                From being trafficked across borders to finally returning home,
+                one survivor shares her story of strength, courage and the long road to healing.
+            </p>
+            <a class="readmore" href="#">Read More →</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

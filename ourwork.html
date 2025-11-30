@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work - Impulse NGO Network</title>
+
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f7f7f7; }
+
+    :root {
+        --yellow: rgba(248,180,78,0.929);
+        --dark:#222;
+        --gray:#555;
+    }
+
+    /* NAVBAR */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(248, 180, 78, 0.929);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        nav .menu a {
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            font-size: 16px;
+        }
+
+    /* HERO */
+    .hero {
+        padding-top:150px;
+        text-align:center;
+        padding-bottom:40px;
+    }
+    .hero h1 {
+        font-size:50px;
+        font-weight:800;
+        color:var(--dark);
+    }
+    .hero p {
+        font-size:18px;
+        color:#666;
+        max-width:700px;
+        margin:10px auto 0;
+        line-height:1.6;
+    }
+
+    /* GRID SECTIONS */
+    .work-container {
+        width:90%;
+        max-width:1300px;
+        margin:40px auto 80px auto;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap:30px;
+    }
+
+    .work-card {
+        background:white;
+        padding:30px;
+        border-radius:14px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        transition:0.3s;
+    }
+    .work-card:hover {
+        transform:translateY(-5px);
+        box-shadow:0 10px 24px rgba(0,0,0,0.15);
+    }
+
+    .work-card h2 {
+        font-size:26px;
+        font-weight:800;
+        margin-bottom:15px;
+        color:#222;
+    }
+
+    .work-card ul {
+        list-style:none;
+        padding-left:0;
+        margin-top:10px;
+    }
+
+    .work-card ul li {
+        margin-bottom:10px;
+    }
+
+    .work-card a {
+        text-decoration:none;
+        color:var(--dark);
+        font-size:16px;
+        padding-left:8px;
+        border-left:3px solid var(--yellow);
+        display:inline-block;
+        transition:0.2s;
+    }
+    .work-card a:hover {
+        color:var(--yellow);
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Impulse NGO Network</div>
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="joinus.html">Join Us</a>
+        <a href="ourwork.html">Our Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Our Work</h1>
+    <p>
+        From research and advocacy to ground-level rescue operations and international collaborations,
+        our work spans across multiple sectors dedicated to protecting vulnerable communities.
+    </p>
+</div>
+
+<!-- GRID SECTIONS -->
+<div class="work-container">
+
+    <!-- PRESS LAB -->
+    <div class="work-card">
+        <h2>[New] Impulse Model Press Lab</h2>
+        <ul>
+            <li><a href="presslab.html">Overview & Impact</a></li>
+        </ul>
+    </div>
+
+    <!-- CHILD LABOUR -->
+    <div class="work-card">
+        <h2>Campaign Against Child Labour</h2>
+        <ul>
+            <li><a href="rat-hole-mining.html">The Problem of Rat-Hole Mining</a></li>
+            <li><a href="media-coverage-childlabour.html">Media Coverage of Our Campaign</a></li>
+        </ul>
+    </div>
+
+    <!-- CONSULTING -->
+    <div class="work-card">
+        <h2>INGON Consulting</h2>
+        <ul>
+            <li><a href="research-reports.html">Research & Reports</a></li>
+            <li><a href="annual-reports.html">Annual Reports</a></li>
+        </ul>
+    </div>
+
+    <!-- PUBLICATIONS -->
+    <div class="work-card">
+        <h2>INGON Publications</h2>
+        <ul>
+            <li><a href="campaigns-collaterals.html">Campaigns & Collaterals</a></li>
+            <li><a href="newsletters.html">Newsletters & Brochures</a></li>
+            <li><a href="guides-manuals.html">Guides & Manuals</a></li>
+        </ul>
+    </div>
+
+    <!-- COMMUNITY -->
+    <div class="work-card">
+        <h2>Community</h2>
+        <ul>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

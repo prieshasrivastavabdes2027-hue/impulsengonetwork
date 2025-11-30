@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer With Us - Impulse NGO Network</title>
+
+    <style>
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(248, 180, 78, 0.929);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        nav .menu a {
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* PAGE LAYOUT */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* LEFT IMAGE PANEL */
+        .left {
+            flex: 1.6;
+            background:
+                linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+                url(img/volunteer.jpg) center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 40px;
+        }
+
+        .left h1 {
+            font-size: 48px;
+            max-width: 400px;
+            line-height: 1.2;
+        }
+
+        /* RIGHT FORM PANEL */
+        .right {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden; 
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 80px;
+            margin-bottom: 60px;
+            margin-left: 80px;
+        }
+
+        .form-box h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .form-box p {
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #bbb;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #ffb14b;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e62424;
+        }
+
+        /* SCROLLABLE TERMS SECTION */
+        .terms-box {
+            max-width: 400px;
+            padding-top: 10px;
+            margin-left: 80px;
+            height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .terms-box h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #222;
+        }
+
+        .terms-box ul {
+            margin-left: 18px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .terms-box ul li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        @media(max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+            .left { height: 40vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Impulse NGO Network</div>
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="joinus.html">Join Us</a>
+            <a href="ourwork.html">Our Work</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- LEFT PANEL -->
+        <div class="left">
+            <h1>Be the reason someone finds hope again.</h1>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+
+            <!-- SIGNUP FORM -->
+            <div class="form-box">
+                <h2>Volunteer Signup</h2>
+                <p>Join our mission and become part of real impact.</p>
+
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="City">
+                <textarea rows="4" placeholder="Why do you want to volunteer?"></textarea>
+
+                <button>Submit Application</button>
+            </div>
+
+            <!-- TERMS + SCROLL -->
+            <div class="terms-box">
+                <h3>Eligibility & Terms</h3>
+
+                <ul>
+                    <li>Must be 18 years or older.</li>
+                    <li>Should be willing to commit at least 4–6 hours per week.</li>
+                    <li>Respect confidentiality and sensitive information.</li>
+                    <li>Follow all safety protocols and reporting guidelines.</li>
+                    <li>Participate in mandatory training sessions.</li>
+                </ul>
+
+                <h3>What We Expect</h3>
+                <ul>
+                    <li>A positive attitude and empathy towards survivors.</li>
+                    <li>Professional behaviour when interacting with communities.</li>
+                    <li>Punctuality and dependable communication.</li>
+                </ul>
+
+                <h3>What You Receive</h3>
+                <ul>
+                    <li>Training certification after program completion.</li>
+                    <li>Field experience and real-world impact work.</li>
+                    <li>Opportunities to contribute to national anti-trafficking initiatives.</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

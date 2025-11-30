@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Impulse NGO Network</title>
+
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fff;overflow-x:hidden;} 
+
+    /* COLORS */
+    :root {
+        --yellow: rgba(248, 180, 78, 0.929);
+        --black: #222;
+        --gray: #444;
+    }
+
+    /* NAVBAR */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(248, 180, 78, 0.929);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        nav .menu a {
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            font-size: 16px;
+        }
+
+    /* PAGE WRAPPER */
+    .section{
+        width:92%;
+        max-width:1300px;
+        margin:0 auto;
+        padding:100px 0;
+    }
+
+    /* HERO BANNER */
+    .hero{
+        width:100%;
+        height:90vh;
+        background:url(img/hero\ about.png) center/cover no-repeat;
+        position:relative;
+        display:flex;
+        align-items:flex-end;
+        padding:80px;
+    }
+    .hero::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:linear-gradient(to bottom, transparent, black);
+        opacity:0.6;
+    }
+    .hero h1{
+        position:relative;
+        color:white;
+        font-size:64px;
+        font-weight:800;
+        line-height:1.1;
+        max-width:700px;
+    }
+
+    /* SPLIT STORY BLOCK */
+    .split{
+        display:flex;
+        gap:50px;
+        align-items:center;
+        margin-bottom:80px;
+    }
+    .split img{
+        width:30%;
+        border-radius:18px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+    .split-text{
+        flex:1;
+    }
+    .split-text h2{
+        font-size:48px;
+        margin-bottom:20px;
+        color:var(--black);
+        font-weight:800;
+    }
+    .split-text p{
+        font-size:19px;
+        line-height:1.6;
+        color:var(--gray);
+    }
+
+    /* FULL WIDTH QUOTE */
+    .quote{
+        width:100%;
+        background:var(--yellow);
+        padding:70px 40px;
+        margin:60px 0;
+    }
+    .quote p{
+        font-size:32px;
+        font-weight:700;
+        text-align:center;
+        color:white;
+        max-width:1000px;
+        margin:auto;
+        line-height:1.3;
+    }
+
+    /* TIMELINE */
+    .timeline-title{
+        font-size:48px;
+        font-weight:800;
+        margin-bottom:20px;
+        color:var(--black);
+    }
+    .timeline{
+        border-left:4px solid var(--yellow);
+        padding-left:80px;
+        position:relative;
+    }
+    .timeline-item{
+        margin-bottom:50px;
+        position:relative;
+    }
+    .timeline-item::before{
+        content:"";
+        position:absolute;
+        left:-30px;
+        top:8px;
+        width:16px;height:16px;
+        background:var(--yellow);
+        border-radius:50%;
+    }
+    .timeline-item h3{
+        font-size:26px;
+        font-weight:700;
+        margin-bottom:8px;
+        color:var(--black);
+    }
+    .timeline-item p{
+        font-size:18px;
+        line-height:1.5;
+        color:var(--gray);
+    }
+
+    /* AWARDS SECTION (kept same as your favourite) */
+    .awards-scroll{
+        display:flex;
+        overflow-x:auto;
+        gap:40px;
+        padding:20px 0;
+        scrollbar-width:none;
+    }
+    .awards-scroll::-webkit-scrollbar{display:none;}
+
+    .award-card{
+        background:white;
+        padding:25px;
+        border-radius:14px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        min-width:350px;
+    }
+    .award-year{
+        color:rgb(215, 59, 59); 
+        font-size:20px;
+        font-weight:bold;
+        margin-bottom:8px;
+    }
+    .award-card h3{
+        font-size:22px;
+        color:var(--yellow);
+        margin-bottom:10px;
+    }
+    .award-card p{
+        font-size:16px;
+        color:#555;
+        line-height:1.5;
+    }
+
+    .team-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    width: 18%; /* 5 cards in a row */
+    min-width: 200px;
+    background:white;
+    padding-bottom:20px;
+}
+
+.team-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.team-card .role {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--yellow);
+    margin-bottom: 8px;
+}
+
+.team-card .desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Impulse NGO Network</div>
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="joinus.html">Join Us</a>
+        <a href="ourwork.html">Our Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <h1>We fight for dignity, justice, and futures rebuilt with hope.</h1>
+</div>
+
+
+<!-- WHAT IS INGON -->
+<div class="section split">
+    <img src="img/logo.png">
+    <div class="split-text">
+        <h2>Who We Are</h2>
+        <p>
+            Impulse NGO Network is a pioneering force working across India and South Asia to prevent trafficking,
+            protect vulnerable communities, rescue survivors, and rebuild futures with dignity.
+            Our work is based on the award-winning Impulse Model, a collaborative framework that unites law
+            enforcement, government agencies, NGOs, and communities.
+        </p>
+    </div>
+</div>
+
+
+<!-- HISTORY -->
+<div class="section split">
+    <div class="split-text">
+        <h2>Our Journey</h2>
+        <p>
+            From a grassroots initiative in Meghalaya to an internationally recognized anti-trafficking network,
+            INGON has built 25+ years of systemic change.  
+            Our work now impacts India, Nepal, Myanmar, and Bangladesh.
+        </p>
+    </div>
+    <img src="img/journey.png">
+</div>
+
+
+<!-- QUOTE -->
+<div class="section quote">
+    <p>“Every rescue is a beginning. Every survivor deserves a second chance at life.”</p>
+</div>
+
+
+<!-- VISION MISSION -->
+<div class="section split">
+    <img src="img/vm.png">
+    <div class="split-text">
+        <h2>Our Vision & Mission</h2>
+        <p>
+            As professionals we will work passionately and relentlessly
+            to reduce human trafficking for exploitation
+            by empowering, engaging, and expanding our network of partners
+            using the 6Ps and 6Rs of the globally acknowledged Impulse Model
+        </p>
+    </div>
+</div>
+
+
+<!-- TIMELINE -->
+<div class="section">
+    <h2 class="timeline-title">How Our Impact Grew</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>1993 — The Beginning</h3>
+            <p>INGON begins grassroots interventions in Northeast India.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>2006 — Regional Expansion</h3>
+            <p>Cross-border partnerships with Nepal, Myanmar, Bangladesh.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>2012 — Global Recognition</h3>
+            <p>The Impulse Model wins international acclaim and replication.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>2020 — Tech for Good</h3>
+            <p>Strengthening digital case management for survivors.</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- AWARDS SECTION -->
+<div class="section">
+    <h2 style="font-size:48px;font-weight:800;color:var(--black);margin-bottom:30px;">Awards & Recognitions</h2>
+
+    <div class="awards-scroll">
+
+        <div class="award-card">
+            <div class="award-year">2019</div>
+            <h3>Sat Paul Mittal National Award</h3>
+            <p>Awarded for impactful anti-trafficking work across Northeast India.</p>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2012</div>
+            <h3>Global Development Award</h3>
+            <p>Recognized globally for innovative development practice.</p>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2012</div>
+            <h3>Billionth Award South Asia</h3>
+            <p>Finalist for mobile technology innovation supporting survivor reintegration.</p>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2007</div>
+            <h3>UNDP Good Practice Model</h3>
+            <p>Selected as a Good Practice Model under WPC-UNDP research.</p>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2006</div>
+            <h3>UNODC Recognition</h3>
+            <p>Honored for exceptional work in global anti-trafficking efforts.</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- TEAM SECTION -->
+<div class="section" style="padding-top:40px;">
+    <h2 style="font-size:48px;font-weight:800;margin-bottom:40px;color:#222;">
+        Our Team
+    </h2>
+
+    <div class="team-row">
+
+        <!-- PERSON 1 -->
+        <div class="team-card">
+            <img src="img/5.png" alt="">
+            <h3>Hasina Kharbhih</h3>
+            <p class="role">Founder & Chairperson</p>
+            <p class="desc">Leading INGON’s mission for over 25 years.</p>
+        </div>
+
+        <!-- PERSON 2 -->
+        <div class="team-card">
+            <img src="img/3.jpg" alt="">
+            <h3>A.G. Kharbhih</h3>
+            <p class="role">Founding Director</p>
+            <p class="desc">Oversees strategy and financial governance.</p>
+        </div>
+
+        <!-- PERSON 3 -->
+        <div class="team-card">
+            <img src="img/1.jpg" alt="">
+            <h3>Sunil Mow</h3>
+            <p class="role">Board Director</p>
+            <p class="desc">Leads policy guidance and advocacy work.</p>
+        </div>
+
+        <!-- PERSON 4 -->
+        <div class="team-card">
+            <img src="img/4.png" alt="">
+            <h3>Tashi Rapten</h3>
+            <p class="role">Board Director</p>
+            <p class="desc">Supports cross-border anti-trafficking projects.</p>
+        </div>
+
+        <!-- PERSON 5 -->
+        <div class="team-card">
+            <img src="img/2.jpg" alt="">
+            <h3>Ranjan Chatterjee</h3>
+            <p class="role">Board Advisor</p>
+            <p class="desc">Former IAS, strengthening systems & policy.</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

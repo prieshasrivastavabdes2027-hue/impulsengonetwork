@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Us - Impulse NGO Network</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(248, 180, 78, 0.929);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        nav .menu a {
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* PAGE LAYOUT */
+        .split-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+            text-align: center;
+        }
+
+        .left-section {
+            background: 
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url(img/volunteer\ join\ us.jpg) center/cover no-repeat;
+        }
+
+        .right-section {
+            background: 
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url(img/donate\ join\ us.jpg) center/cover no-repeat;
+        }
+
+        /* BUTTONS */
+        .cta-btn {
+            background: #ff4b4b;
+            color: white;
+            padding: 16px 40px;
+            font-size: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+
+        /* TEXT */
+        .section-content {
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .section-content h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .section-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* MOBILE */
+        @media(max-width: 900px) {
+            .split-container {
+                flex-direction: column;
+            }
+            .left-section, .right-section {
+                height: 50vh;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR (same as home page) -->
+    <nav>
+        <div class="logo">Impulse NGO Network</div>
+
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="joinus.html">Join Us</a>
+            <a href="ourwork.html">Our Work</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- SPLIT SECTIONS -->
+    <div class="split-container">
+
+        <!-- LEFT: VOLUNTEER -->
+        <div class="left-section">
+            <div class="section-content">
+                <h1>Volunteer With Us</h1>
+                <p>
+                    Be part of a mission that creates real impact.  
+                    Support communities, spread awareness, and help change lives.
+                </p>
+                <a href="volunteer.html" class="cta-btn">Become a Volunteer</a>
+            </div>
+        </div>
+
+        <!-- RIGHT: DONATE -->
+        <div class="right-section">
+            <div class="section-content">
+                <h1>Support Our Mission</h1>
+                <p>
+                    Your contribution helps us rescue, empower, and protect vulnerable individuals.  
+                    Every donation directly fuels our work.
+                </p>
+                <a href="donate_main.html" class="cta-btn">Donate Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
